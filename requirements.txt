@@ -1,2 +1,6 @@
 eve
 pymongo
+python-dotenv
+aiohttp
+autogen-agentchat==0.4.0.dev11
+autogen-ext[openai]==0.4.0.dev11

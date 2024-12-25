@@ -1,42 +1,26 @@
 import os
 
-schema = {
+user_schema = {
     # Schema definition, based on Cerberus grammar. Check the Cerberus project
     # (https://github.com/pyeve/cerberus) for details.
-    'firstname': {
+    'name': {
         'type': 'string',
         'minlength': 1,
-        'maxlength': 10,
-    },
-    'lastname': {
-        'type': 'string',
-        'minlength': 1,
-        'maxlength': 15,
         'required': True,
-        # talk about hard constraints! For the purpose of the demo
-        # 'lastname' is an API entry-point, so we need it to be unique.
+    },
+    'email': {
+        'type': 'string',
+        'minlength': 1,
+        'required': True,
         'unique': True,
     },
-    # 'role' is a list, and can only contain values from 'allowed'.
     'role': {
         'type': 'list',
-        'allowed': ["author", "contributor", "copy"],
-    },
-    # An embedded 'strongly-typed' dictionary.
-    'location': {
-        'type': 'dict',
-        'schema': {
-            'address': {'type': 'string'},
-            'city': {'type': 'string'}
-        },
-    },
-    'born': {
-        'type': 'datetime',
+        'allowed': ["user", "manager", "admin"],
     },
 }
 
-
-DOMAIN = {'people': { 'schema': schema }}
+DOMAIN = {'users': { 'schema': user_schema }}
 RESOURCE_METHODS = ['GET', 'POST', 'DELETE']
 
 # if running from docker, use the docker container name, else use localhost
