@@ -15,7 +15,7 @@ user_schema = {
         'unique': True,
     },
     'role': {
-        'type': 'list',
+        'type': 'string',
         'allowed': ["user", "manager", "admin"],
     },
 }
