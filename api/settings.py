@@ -45,8 +45,4 @@ if 'DOCKER_CONTAINER' in os.environ:
 else:
     MONGO_HOST = 'localhost'
 
-# MONGO_HOST = 'mongodb'
-
-
-
 URL_PREFIX = 'api'
