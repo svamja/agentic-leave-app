@@ -1,4 +1,4 @@
-# Agentic Leave App
+# Agentic Leave App (WIP)
 
 Employee Leave Application using Autogen Agentic AI 
 
@@ -8,6 +8,11 @@ Idea is to build an application where agents control the business logic of the a
 while the CRUD operations are supported by REST APIs. And there is no UI, but only the chat interface.
 
 This is inspired by Satya Nadella's speech https://www.youtube.com/watch?v=uGOLYz2pgr8
+
+### Get Started
+
+* docker compose up
+* access the endpoint at http://localhost:8085/
 
 ### Architecture
 
@@ -20,7 +25,6 @@ Roles
 * admin - can manage users
 * user - can apply leave. has a manager assigned.
 * manager - can approve/reject leaves as well as everything a user can do.
-
 
 
 
